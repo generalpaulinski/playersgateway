@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>PlayersGateway</title>
+
+  <!-- Keep the project intentionally out of search engines for now -->
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+  <meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+    :root {
+      --background: #F4F5F3;
+      --text: #111214;
+      --secondary: #8A8F94;
+      --line: #C9CCCE;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      min-height: 100%;
+      background: var(--background);
+      color: var(--text);
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: "IBM Plex Sans", Arial, sans-serif;
+    }
+
+    .page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      padding: 38px 48px 24px;
+    }
+
+    .meta {
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 10px;
+      color: var(--secondary);
+      text-transform: uppercase;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero {
+      width: 100%;
+    }
+
+    .logo-wrap {
+      width: min(760px, 78vw);
+    }
+
+    .logo {
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      object-position: left center;
+    }
+
+    .status {
+      margin-top: 42px;
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 11px;
+      color: var(--secondary);
+    }
+
+    footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      border-top: 1px solid var(--line);
+      padding-top: 15px;
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 9px;
+      color: var(--secondary);
+    }
+
+    footer a {
+      color: inherit;
+      text-decoration: none;
+      opacity: 0.55;
+      transition: opacity 0.2s ease;
+    }
+
+    footer a:hover,
+    footer a:focus {
+      opacity: 1;
+    }
+
+    @media (max-width: 600px) {
+      .page {
+        padding: 24px 22px 18px;
+      }
+
+      .logo-wrap {
+        width: min(92vw, 620px);
+      }
+
+      footer {
+        font-size: 8px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+
+    <header class="meta">
+      PlayersGateway
+    </header>
+
+    <main>
+      <section class="hero" aria-label="PlayersGateway">
+        <!-- Replace logo-placeholder.svg with your final PNG or SVG logo -->
+        <div class="logo-wrap">
+          <img
+            src="logo-placeholder.png"
+            alt="PlayersGateway"
+            class="logo"
+          >
+        </div>
+
+        <div class="status">
+          Currently building.
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span>© 2026 PlayersGateway</span>
+      <a href="imprint.html">Imprint</a>
+    </footer>
+
+  </div>
+</body>
+</html>
