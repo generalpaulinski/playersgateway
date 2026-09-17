@@ -12,6 +12,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <link
     href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap"
     rel="stylesheet"
@@ -60,14 +61,23 @@
       flex: 1;
       display: flex;
       align-items: center;
+      justify-content: center;
     }
 
     .hero {
       width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
     }
 
     .logo-wrap {
       width: min(760px, 78vw);
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
     .logo {
@@ -75,7 +85,22 @@
       width: 100%;
       height: auto;
       object-fit: contain;
-      object-position: left center;
+
+      /* Subtle breathing animation */
+      animation: breathe 4s ease-in-out infinite;
+      transform-origin: center center;
+      will-change: transform;
+    }
+
+    @keyframes breathe {
+      0%,
+      100% {
+        transform: scale(0.985);
+      }
+
+      50% {
+        transform: scale(1.015);
+      }
     }
 
     .status {
@@ -83,6 +108,7 @@
       font-family: "IBM Plex Mono", monospace;
       font-size: 11px;
       color: var(--secondary);
+      text-align: center;
     }
 
     footer {
@@ -117,14 +143,26 @@
         width: min(92vw, 620px);
       }
 
+      .status {
+        margin-top: 30px;
+      }
+
       footer {
         font-size: 8px;
+      }
+    }
+
+    /* Accessibility: disable animation if reduced motion is preferred */
+    @media (prefers-reduced-motion: reduce) {
+      .logo {
+        animation: none;
       }
     }
   </style>
 </head>
 
 <body>
+
   <div class="page">
 
     <header class="meta">
@@ -133,7 +171,7 @@
 
     <main>
       <section class="hero" aria-label="PlayersGateway">
-        <!-- Replace logo-placeholder.svg with your final PNG or SVG logo -->
+
         <div class="logo-wrap">
           <img
             src="logo-placeholder.png"
@@ -145,6 +183,7 @@
         <div class="status">
           Currently building.
         </div>
+
       </section>
     </main>
 
@@ -154,5 +193,6 @@
     </footer>
 
   </div>
+
 </body>
 </html>
